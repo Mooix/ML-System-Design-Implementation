@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width = device - width, initial-scale=1.0">
+    <title>Model prediction</title>
+    <link href="{{ url_for('static', filename='/css/style2.css') }}" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div class="center">
+        <h1 class="intro">Airline Passenger Satisfaction</h1>
+        <form action="/submit" method="post">
+           
+            <div class="inputs">
+                <div class="txt">
+                    <input type="text", name="CType" required=""></input>
+                    <span></span>
+                    <label>Customer type (Loyal customer or disloyal customer)</label>
+                 </div>
+            
+                <div class="txt">
+                    <input type="text", name="TravelType" required=""></input>
+                    <span></span>
+                    <label>Type of travel (Business travel or Personal travel)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="text", name="Class" required=""></input>
+                    <span></span>
+                    <label>Class (Business or Eco or Eco Plus)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Flightdistance" required="">
+                    <span></span>
+                    <label>Flight distance</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="inflightWifi" required="" min="0" max="5">
+                    <span></span>
+                    <label>Inflight wifi service (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="DAtime" required="" min="0" max="5">
+                    <span></span>
+                    <label>Departure/Arrival time convenient (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="EaseBooking" required="" min="0" max="5">
+                    <span></span>
+                    <label>Ease of Online booking (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="GLocation" required="" min="1" max="5">
+                    <span></span>
+                    <label>Gate location (rate from 1 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="FoodDrink" required="" min="0" max="5">
+                    <span></span>
+                    <label>Food and drink (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="OnlineBoarding" required="" min="0" max="5">
+                    <span></span>
+                    <label>Online boarding (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Seat" required="" min="1" max="5">
+                    <span></span>
+                    <label>Seat comfort (rate from 1 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Inflightentertainment" required="" min="0" max="5">
+                    <span></span>
+                    <label>Inflight entertainment (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="OnBoardservice" required="" min="0" max="5">
+                    <span></span>
+                    <label>On-board service (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="LegRoom" required="" min="0" max="5">
+                    <span></span>
+                    <label>Leg room service (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Baggage" required="" min="1" max="5">
+                    <span></span>
+                    <label>Baggage handling (rate from 1 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Checkin" required="" min="1" max="5">
+                    <span></span>
+                    <label>Checkin service (rate from 1 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Inflightservice" required="" min="0" max="5">
+                    <span></span>
+                    <label>Inflight service (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="Cleanliness" required="" min="0" max="5">
+                    <span></span>
+                    <label>Cleanliness (rate from 0 to 5)</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="DepartureDelay" required="">
+                    <span></span>
+                    <label>Departure Delay in Minutes</label>
+                </div>
+
+                <div class="txt">
+                    <input type="number", name="ArrivalDelay" required="">
+                    <span></span>
+                    <label>Arrival Delay in Minutes</label>
+                </div>
+
+                <input type="submit" value="Submit" name="submit">
+            </div>
+
+            
+        </form>
+    </div>
+</body>
+</html>

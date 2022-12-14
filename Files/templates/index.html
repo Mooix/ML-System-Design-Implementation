@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model prediction</title>
+    <link href="{{ url_for('static', filename='/css/style.css') }}" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div class="inputs">
+       <form action="/submit" method="post">
+        <div class="banner">
+            <h1 class="intro">Airline Passenger Satisfaction</h1>
+        </div>
+        <div class="user-box">
+            <h4>Customer type<span>*</span></h4>
+            <select required="" name="CType">
+                <option value="0">Loyal customer</option>
+                <option value="1">Disloyal customer</option>
+            </select>
+            <h4>Type of travel<span>*</span></h4>
+            <select required="" name="TravelType">
+                <option value="0">Business travel</option>
+                <option value="1">Personal travel</option>
+            </select>
+            <h4>Class<span>*</span></h4>
+            <select required="" name="Class">
+                <option value="0">Business</option>
+                <option value="1">Eco</option>
+                <option value="2">Eco Plus</option>
+            </select>
+            <h4>Flight distance<span>*</span></h4>
+            <input type="number", name="Flightdistance" required="">
+           
+            <h4>Inflight wifi service<span>*</span></h4>
+            <select required="" name="inflightWifi">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+          
+            <h4>Departure/Arrival time convenient<span>*</span></h4>
+            <select required="" name="DAtime">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+           
+            <h4>Ease of Online booking<span>*</span></h4>
+            <select required="" name ="EaseBooking">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Gate location<span>*</span></h4>
+            <select required="" name="GLocation">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Food and drink<span>*</span></h4>
+            <select required="" name="FoodDrink">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Online boarding<span>*</span></h4>
+            <select required="" name="OnlineBoarding">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Seat comfort<span>*</span></h4>
+            <select required="" name="Seat">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Inflight entertainment<span>*</span></h4>
+            <select required="" name="Inflightentertainment">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+          
+
+            <h4>On-board service<span>*</span></h4>
+            <select required="" name="OnBoardservice">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+
+            <h4>Leg room service<span>*</span></h4>
+            <select required="" name="LegRoom">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+            <h4>Baggage handling<span>*</span></h4>
+            <select required="" name="Baggage">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Checkin service	<span>*</span></h4>
+            <select required="" name="Checkin">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Inflight service<span>*</span></h4>
+            <select required="" name="Inflightservice">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Cleanliness<span>*</span></h4>
+            <select required="" name="Cleanliness">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <h4>Departure Delay in Minutes<span>*</span></h4>
+            <input type="number", name="DepartureDelay" required="">
+
+            <h4>Arrival Delay in Minutes<span>*</span></h4>
+            <input type="number", name="ArrivalDelay" required="">
+
+            <input type="submit" value="Submit" name="submit">
+        </div>
+       </form>
+        
+
+        
+        
+    </div>
+    
+    
+</body>
+</html>
